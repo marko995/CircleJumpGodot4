@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://cbrp5on7g42a8"]
+
+[ext_resource type="Script" path="res://objects/Jumper.gd" id="1_vbkcf"]
+[ext_resource type="Texture2D" uid="uid://0rm5sduskfsr" path="res://assets/images/jumper.png" id="2_8lgri"]
+[ext_resource type="Shader" path="res://objects/Jumper.gdshader" id="2_bn2he"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sv8v3"]
+shader = ExtResource("2_bn2he")
+shader_parameter/color = Color(0.588235, 0.286275, 0.0862745, 1)
+
+[node name="Jumper" type="Area2D"]
+script = ExtResource("1_vbkcf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_sv8v3")
+rotation = 1.5708
+texture = ExtResource("2_8lgri")

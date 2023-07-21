@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://2p1qnfisbhuh"]
+
+[ext_resource type="Script" path="res://objects/Main.gd" id="1_q711b"]
+[ext_resource type="PackedScene" uid="uid://b7yb68tfbb4r5" path="res://objects/Circle.tscn" id="3_5v5hu"]
+[ext_resource type="PackedScene" uid="uid://cbrp5on7g42a8" path="res://objects/Jumper.tscn" id="4_i654w"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_q711b")
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(240, 700)
+offset = Vector2(0, -273)
+position_smoothing_enabled = true
+
+[node name="Circle" parent="." instance=ExtResource("3_5v5hu")]
+position = Vector2(212, 362)
+
+[node name="Jumper" parent="." instance=ExtResource("4_i654w")]
+position = Vector2(163, 190)
+
+[node name="Circle2" parent="." instance=ExtResource("3_5v5hu")]
+position = Vector2(349, 134)
